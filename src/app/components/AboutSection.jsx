@@ -23,7 +23,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li> <p>2024-2024</p>Pursuing Engineering From IIIT UNA HIMACHAL PRADESH</li>
+        <li> <p>2020-2024</p>Pursuing Engineering From IIIT UNA HIMACHAL PRADESH</li>
         <li> <p>2019</p>COMPLETED MY 10+2 FROM GOVT. SR. SEC. SCHOOL SRI KARANPUR (RBSC BOARD)</li>
         <li> <p>2017</p>COMPLETED MY 10TH FROM TILAK PUBLIC SCHOOL SRIKARANPUR (RBSC BOARD)</li>
       </ul>
