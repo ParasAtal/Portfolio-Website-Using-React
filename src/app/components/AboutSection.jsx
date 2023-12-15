@@ -9,12 +9,13 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        {/* <li>PostgreSQL</li>
-        <li>Sequelize</li> */}
-        <li>JavaScript</li>
+        <li>Machine Learning</li>
+        <li>Computer Vision</li>
+        <li>LangChainJS</li>
+        <li>Flutter</li>
+        <li>HTML, CSS, JavaScript</li>
         <li>React</li>
+        <li>DSA</li>
       </ul>
     ),
   },
@@ -23,9 +24,32 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li> <p>2020-2024</p>Pursuing Engineering From IIIT UNA HIMACHAL PRADESH</li>
-        <li> <p>2019</p>COMPLETED MY 10+2 FROM GOVT. SR. SEC. SCHOOL SRI KARANPUR (RBSC BOARD)</li>
-        <li> <p>2017</p>COMPLETED MY 10TH FROM TILAK PUBLIC SCHOOL SRIKARANPUR (RBSC BOARD)</li>
+        <li>
+          <p>2019</p>10th(ICSE Board)-Carmel School, Jorhat, Assam(91.6%)
+        </li>
+        <li>
+          <p>2021</p>12th(CBSE Board)-Bhagat Public School, Kota, Rajasthan(81.6%)
+        </li>
+        <li>
+          <p>2021-2025</p>BTech in CSE from SRM University, Chennai(CGPA-9.78)
+        </li>
+      </ul>
+    ),
+  },
+  {
+    title: "Internships",
+    id: "internships",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>
+          In-House Project under Professor at SRM
+        </li>
+        <li>
+          Research Intern- SAMSUNG PRISM
+        </li>
+        <li>
+          Upcoming SDE Intern- BNY MELLON (2024 Summer Internship)
+        </li>
       </ul>
     ),
   },
@@ -34,10 +58,23 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>The Complete ReactJs Course - Basics to Advanced [2023]</li>
-        <li>Python And Flask Framework Complete Course</li>
-        <li>CSS crash Course For Beginners</li>
-        <li>Machine Learning Basics</li>
+        <li>NVIDIA Jetson AI Specialist</li>
+        <li>NPTEL-Machine Learning</li>
+        <li>NPTEL-Soft Skills Development</li>
+        <li>JNCAA Getting Started with Cloud</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Achievements",
+    id: "achievements",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Department Topper -4th Sem(10.00 GPA)</li>
+        <li>Performance Based Scholarship Awardee</li>
+        <li>Best Delegation at Christ MUN23</li>
+        <li>1502 Contest Rating on Leetcode</li>
+        <li>AIR 73-Coding Ninjas Founders Invitation Online Challenge</li>
       </ul>
     ),
   },
@@ -56,16 +93,15 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/about-image.png" width={500} height={500} alt="About Me" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express,
-             HTML, CSS, MongoDb, Mongoose, Git and Github. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            I am a budding Software Engineer passionate about crafting interactive applications.
+            Proficient in HTML, CSS, JavaScript, React, and Python, with experience in C++, LangChainJS, Machine Learning, Computer Vision, and DSA.
+            Love handling problem solving questions and have solved over 500+ DSA problems on various Platforms including Leetcode,GFG,Hackkerank.
+            Skilled in Git and GitHub for collaborative development.
+            Quick learner, team player, and excited to contribute to innovative projects.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -83,11 +119,25 @@ const AboutSection = () => {
               Education{" "}
             </TabButton>
             <TabButton
+              selectTab={() => handleTabChange("internships")}
+              active={tab === "internships"}
+            >
+              {" "}
+              Internships{" "}
+            </TabButton>
+            <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
               {" "}
               Certifications{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("achievements")}
+              active={tab === "achievements"}
+            >
+              {" "}
+              Achievements{" "}
             </TabButton>
           </div>
           <div className="mt-8">

@@ -21,11 +21,11 @@ const achievementsList = [
   //   value: "100,000",
   // },
   {
-    metric: "Certification",
-    value: "4",
+    metric: "Leetcode Questions",
+    value: "250+",
   },
   {
-    metric: "Years",
+    metric: "Internship Experiences",
     value: "2",
   },
 ];
